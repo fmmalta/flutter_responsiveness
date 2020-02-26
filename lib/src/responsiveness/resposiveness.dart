@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-double responsiveFont(BuildContext context, double value) {
-  final double _magic = MediaQuery.of(context).size.width / 400;
+double responsiveFont(BuildContext context, double value, {double dividedBy}) {
+  final double _magic = MediaQuery.of(context).size.width / (dividedBy ?? 400);
   return _magic * value;
 }
 
